@@ -1,10 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { PostService } from './services/post.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
-  title = 'REST-countires-API';
+export class AppComponent implements OnInit {
+  posts: any;
+
+  constructor(private service: PostService) {}
+
+  ngOnInit() {
+    this.service.getPosts().subscribe((response) => {
+      this.posts = response;
+    });
+  }
+
+  test() {
+    console.log(this.posts);
+  }
 }
