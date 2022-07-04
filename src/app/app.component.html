@@ -1,2 +1,5 @@
-<button (click)="test()">test</button>
-<span *ngFor="let item of posts; index as i"> {{ posts[i].name }} </span>
+<mat-toolbar>
+  <span>Where in the Word? </span>
+  <button (click)="test()">test</button>
+</mat-toolbar>
+<mat-card *ngFor="let item of posts; index as i">{{ posts[i].name }} </mat-card>
