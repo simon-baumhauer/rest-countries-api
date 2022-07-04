@@ -7,9 +7,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
+import { CountryComponent } from './country/country.component';
+import { CountryDetailsComponent } from './country-details/country-details.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, CountryComponent, CountryDetailsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

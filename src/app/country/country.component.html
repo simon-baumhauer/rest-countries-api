@@ -1,0 +1,26 @@
+<div class="card-container">
+  <mat-card routerLink="country-details" *ngFor="let item of posts; index as i">
+    <div>
+      <img src="{{ posts[i].flags.svg }}" alt="" />
+    </div>
+    <mat-card-header>
+      <mat-card-title>
+        {{ posts[i].name }}
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <span class="space-between">
+        <span style="font-weight: bold">Population: </span
+        ><span class="lightgrey">{{ posts[i].population }}</span></span
+      >
+      <span class="space-between"
+        ><span style="font-weight: bold">Region: </span>
+        <span class="lightgrey">{{ posts[i].region }}</span></span
+      >
+      <span class="space-between"
+        ><span style="font-weight: bold">Capital: </span>
+        <span class="lightgrey">{{ posts[i].capital }}</span></span
+      >
+    </mat-card-content>
+  </mat-card>
+</div>
