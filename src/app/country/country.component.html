@@ -1,5 +1,10 @@
 <div class="card-container">
-  <mat-card routerLink="country-details" *ngFor="let item of posts; index as i">
+  <mat-card
+    routerLink="country-details"
+    fragment="{{ posts[i] }}"
+    [queryParams]="{ counter: i }"
+    *ngFor="let item of posts; index as i"
+  >
     <div>
       <img src="{{ posts[i].flags.svg }}" alt="" />
     </div>

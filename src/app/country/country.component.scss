@@ -1,3 +1,12 @@
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lightgrey {
+  color: rgb(119, 118, 118);
+}
+
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -5,7 +14,7 @@
 }
 
 mat-card {
-  margin-right: 40px;
+  margin: 0px 20px 30px 20px;
   width: 280px;
   min-height: 320px;
   position: relative;
@@ -25,7 +34,7 @@ mat-card {
     flex-direction: column;
     padding: 0 15px;
     position: absolute;
-    width: 85%;
+    width: 89%;
     bottom: 10px;
   }
   img {
