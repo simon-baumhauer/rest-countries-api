@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CountryServiceService } from '../country-service.service';
 
 @Component({
   selector: 'app-country-details',
@@ -6,9 +7,13 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./country-details.component.scss'],
 })
 export class CountryDetailsComponent implements OnInit {
-  @Input() currentCountry: string = '';
+  message!: number;
 
-  constructor() {}
+  constructor(private currentCountry: CountryServiceService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.currentCountry.currentMessage.subscribe(
+      (message) => (this.message = message)
+    );
+  }
 }

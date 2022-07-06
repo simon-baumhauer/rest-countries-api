@@ -1,8 +1,6 @@
 <div class="card-container">
   <mat-card
-    routerLink="country-details"
-    fragment="{{ posts[i] }}"
-    [queryParams]="{ counter: i }"
+    (click)="countryDetailsView(i)"
     *ngFor="let item of posts; index as i"
   >
     <div>
