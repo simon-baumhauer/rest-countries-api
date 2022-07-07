@@ -2,20 +2,46 @@
   <div class="country-container">
     <img src="{{ countries[message].flags.svg }}" alt="" />
     <div class="flex-coulmn">
+      <h1>{{ countries[message].name }}</h1>
       <div class="flex">
-        <div>
-          <h1>{{ countries[message].name }}</h1>
-
-          <div><span>Native Name:</span><span></span></div>
-          <div><span>Population:</span><span></span></div>
-          <div><span>Region:</span><span></span></div>
-          <div><span>Sub Region:</span><span></span></div>
-          <div><span>Capital:</span><span></span></div>
+        <div class="columns margin-right">
+          <div>
+            <span>Native Name:</span
+            ><span>{{ countries[message].nativeName }}</span>
+          </div>
+          <div>
+            <span>Population:</span
+            ><span>{{ countries[message].population }}</span>
+          </div>
+          <div>
+            <span>Region:</span><span>{{ countries[message].region }}</span>
+          </div>
+          <div>
+            <span>Sub Region:</span
+            ><span>{{ countries[message].subregion }}</span>
+          </div>
+          <div>
+            <span>Capital:</span><span>{{ countries[message].capital }}</span>
+          </div>
         </div>
-        <div>
-          <div><span>Top Level Domain:</span><span></span></div>
-          <div><span>Currencies:</span><span></span></div>
-          <div><span>Languages:</span><span></span></div>
+        <div class="columns">
+          <div>
+            <span>Top Level Domain:</span
+            ><span>{{ countries[message].topLevelDomain }}</span>
+          </div>
+          <div>
+            <span>Currencies:</span
+            ><span>{{ countries[message].currencies[0].name }}</span>
+          </div>
+          <div>
+            <span>Languages:</span
+            ><span>
+              <span
+                *ngFor="let item of countries[message].languages; index as i"
+                >{{ countries[message].languages[i].name }}
+              </span></span
+            >
+          </div>
         </div>
       </div>
       <div>

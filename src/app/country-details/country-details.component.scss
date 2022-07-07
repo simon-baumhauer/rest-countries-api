@@ -1,6 +1,9 @@
 .flex {
   display: flex;
-  align-items: center;
+}
+
+.margin-right {
+  margin-right: 32px;
 }
 
 .center-container {
@@ -25,4 +28,13 @@
 .flex-coulmn {
   display: flex;
   flex-direction: column;
+}
+
+.columns {
+  width: 250px;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
 }

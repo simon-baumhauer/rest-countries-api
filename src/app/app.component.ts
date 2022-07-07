@@ -7,15 +7,17 @@ import { PostService } from './services/post.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  posts: any;
+  countries: any;
 
   constructor(private service: PostService) {}
 
   ngOnInit() {
     this.service.getCountries().subscribe((response) => {
-      this.posts = response;
+      this.countries = response;
     });
   }
 
-  test() {}
+  test() {
+    console.log(this.countries);
+  }
 }
