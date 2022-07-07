@@ -9,7 +9,7 @@ import { PostService } from '../services/post.service';
   styleUrls: ['./country.component.scss'],
 })
 export class CountryComponent implements OnInit {
-  posts: any;
+  countries: any;
   countryNumber!: number;
   message!: number;
 
@@ -20,16 +20,9 @@ export class CountryComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.service.getPosts().subscribe((response) => {
-      this.posts = response;
+    this.service.getCountries().subscribe((response: any) => {
+      this.countries = response;
     });
-    this.currentCountry.currentMessage.subscribe(
-      (message) => (this.message = message)
-    );
-  }
-
-  test() {
-    console.log(this.posts);
   }
 
   countryDetailsView(i: any) {

@@ -6,9 +6,7 @@ BehaviorSubject;
   providedIn: 'root',
 })
 export class CountryServiceService {
-  private messageSource = new BehaviorSubject<number>(
-    12341111111111111111111111111111111111111111111
-  );
+  private messageSource = new BehaviorSubject<number>(0);
   currentMessage = this.messageSource.asObservable();
 
   constructor() {}

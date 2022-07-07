@@ -9,7 +9,7 @@ export class PostService {
 
   constructor(private httpClient: HttpClient) {}
 
-  getPosts() {
+  getCountries() {
     return this.httpClient.get(this.url);
   }
 }

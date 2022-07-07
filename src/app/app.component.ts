@@ -12,12 +12,10 @@ export class AppComponent implements OnInit {
   constructor(private service: PostService) {}
 
   ngOnInit() {
-    this.service.getPosts().subscribe((response) => {
+    this.service.getCountries().subscribe((response) => {
       this.posts = response;
     });
   }
 
-  test() {
-    console.log(this.posts);
-  }
+  test() {}
 }
