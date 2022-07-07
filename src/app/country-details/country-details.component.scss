@@ -1,0 +1,28 @@
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 84px);
+
+  img {
+    width: 400px;
+    height: 300px;
+  }
+}
+
+.country-container {
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-coulmn {
+  display: flex;
+  flex-direction: column;
+}

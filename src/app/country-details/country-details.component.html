@@ -1,1 +1,26 @@
-<div>{{ countries[message].name }}</div>
+<div class="center-container">
+  <div class="country-container">
+    <img src="{{ countries[message].flags.svg }}" alt="" />
+    <div class="flex-coulmn">
+      <div class="flex">
+        <div>
+          <h1>{{ countries[message].name }}</h1>
+
+          <div><span>Native Name:</span><span></span></div>
+          <div><span>Population:</span><span></span></div>
+          <div><span>Region:</span><span></span></div>
+          <div><span>Sub Region:</span><span></span></div>
+          <div><span>Capital:</span><span></span></div>
+        </div>
+        <div>
+          <div><span>Top Level Domain:</span><span></span></div>
+          <div><span>Currencies:</span><span></span></div>
+          <div><span>Languages:</span><span></span></div>
+        </div>
+      </div>
+      <div>
+        <Span>Border Countires:</Span>
+      </div>
+    </div>
+  </div>
+</div>
