@@ -2,8 +2,28 @@
   display: flex;
 }
 
+.space-between {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
 .margin-right {
   margin-right: 32px;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+.declaration {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.input {
+  font-size: 12px;
+  font-weight: 400;
 }
 
 .center-container {
@@ -12,7 +32,8 @@
   align-items: center;
   min-height: calc(100vh - 84px);
 
-  img {
+  img,
+  .img {
     width: 400px;
     height: 300px;
     margin-right: 30px;

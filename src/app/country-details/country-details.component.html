@@ -6,51 +6,59 @@
       <div class="flex">
         <div class="columns margin-right">
           <div>
-            <span>Native Name:</span
-            ><span>{{ countries[message].nativeName }}</span>
+            <span class="declaration">Native Name:</span
+            ><span class="input">{{ countries[message].nativeName }}</span>
           </div>
           <div>
-            <span>Population:</span
-            ><span>{{ countries[message].population }}</span>
+            <span class="declaration">Population:</span
+            ><span class="input">{{ countries[message].population }}</span>
           </div>
           <div>
-            <span>Region:</span><span>{{ countries[message].region }}</span>
+            <span class="declaration">Region:</span
+            ><span class="input">{{ countries[message].region }}</span>
           </div>
           <div>
-            <span>Sub Region:</span
-            ><span>{{ countries[message].subregion }}</span>
+            <span class="declaration">Sub Region:</span
+            ><span class="input">{{ countries[message].subregion }}</span>
           </div>
           <div>
-            <span>Capital:</span><span>{{ countries[message].capital }}</span>
+            <span class="declaration">Capital:</span
+            ><span class="input">{{ countries[message].capital }}</span>
           </div>
         </div>
         <div class="columns">
           <div>
-            <span>Top Level Domain:</span
-            ><span>{{ countries[message].topLevelDomain }}</span>
+            <span class="declaration">Top Level Domain:</span
+            ><span class="input">{{ countries[message].topLevelDomain }}</span>
           </div>
           <div>
-            <span>Currencies:</span
-            ><span>{{ countries[message].currencies[0].name }}</span>
+            <span class="declaration">Currencies:</span
+            ><span class="input">{{
+              countries[message].currencies[0].name
+            }}</span>
           </div>
           <div>
-            <span>Languages:</span
-            ><span>
+            <span class="declaration">Languages:</span>
+            <div>
               <span
+                class="input"
                 *ngFor="let item of countries[message].languages; index as i"
                 >{{ countries[message].languages[i].name }}
-              </span></span
-            >
+              </span>
+            </div>
           </div>
         </div>
       </div>
-      <div>
-        <Span
-          >Border Countires:
-          <span *ngFor="let item of countries[message].border; index as i">
+      <div class="space-between">
+        <Span class="declaration">Border Countires:</Span>
+        <div>
+          <span
+            class="input"
+            *ngFor="let item of countries[message].borders; index as i"
+          >
             {{ item }}</span
-          ></Span
-        >
+          >
+        </div>
       </div>
     </div>
   </div>
