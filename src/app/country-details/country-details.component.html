@@ -45,7 +45,12 @@
         </div>
       </div>
       <div>
-        <Span>Border Countires:</Span>
+        <Span
+          >Border Countires:
+          <span *ngFor="let item of countries[message].border; index as i">
+            {{ item }}</span
+          ></Span
+        >
       </div>
     </div>
   </div>
