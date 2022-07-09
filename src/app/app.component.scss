@@ -5,3 +5,13 @@ mat-toolbar {
     top: 20px;
   }
 }
+
+.flex {
+  display: flex;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

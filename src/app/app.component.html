@@ -3,4 +3,26 @@
   <button (click)="test()">test</button>
 </mat-toolbar>
 
-<router-outlet></router-outlet>
+<div class="container">
+  <div class="flex">
+    <input type="text" name="" id="" />
+
+    <mat-form-field appearance="fill">
+      <mat-label>Select an option</mat-label>
+      <mat-select [(value)]="selected">
+        <mat-option>None</mat-option>
+        <mat-option value="Asia">Asia</mat-option>
+        <mat-option value="Europe">Europe</mat-option>
+        <mat-option value="Africa">Africa</mat-option>
+        <mat-option value="Oceania">Oceania</mat-option>
+        <mat-option value="Polar">Polar</mat-option>
+        <mat-option value="Americas">Americas</mat-option>
+        <mat-option value="Polar">Polar</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div>{{ selected }}</div>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>

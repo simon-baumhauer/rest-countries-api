@@ -8,6 +8,7 @@ import { PostService } from './services/post.service';
 })
 export class AppComponent implements OnInit {
   countries: any;
+  selected = 'Europe';
 
   constructor(private service: PostService) {}
 

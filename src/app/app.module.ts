@@ -9,6 +9,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { CountryComponent } from './country/country.component';
 import { CountryDetailsComponent } from './country-details/country-details.component';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [AppComponent, CountryComponent, CountryDetailsComponent],
@@ -19,6 +20,7 @@ import { CountryDetailsComponent } from './country-details/country-details.compo
     HttpClientModule,
     MatToolbarModule,
     MatCardModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
