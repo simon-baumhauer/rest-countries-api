@@ -12,7 +12,7 @@ export class CountryComponent implements OnInit {
   countries: any;
   countryNumber!: number;
   message!: number;
-
+  selected = 'Europe';
   constructor(
     private service: PostService,
     private router: Router,
