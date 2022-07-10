@@ -25,6 +25,13 @@ export class CountryComponent implements OnInit {
     });
   }
 
+  checkRegion() {
+    const result = this.countries.filter(
+      (country: any) => country.region === this.selected
+    );
+    console.log(result);
+  }
+
   countryDetailsView(i: any) {
     this.router.navigateByUrl('/country-details');
     this.countryNumber = i;
