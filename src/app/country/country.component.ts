@@ -13,6 +13,8 @@ export class CountryComponent implements OnInit {
   countryNumber!: number;
   message!: number;
   selected = 'Europe';
+  result!: string;
+  selectedRegion: any;
   constructor(
     private service: PostService,
     private router: Router,
@@ -22,14 +24,15 @@ export class CountryComponent implements OnInit {
   ngOnInit() {
     this.service.getCountries().subscribe((response: any) => {
       this.countries = response;
+      this.result = this.countries.filter(
+        (country: any) => country.region === this.selected
+      );
+      this.selectedRegion = this.result;
     });
   }
 
-  checkRegion() {
-    const result = this.countries.filter(
-      (country: any) => country.region === this.selected
-    );
-    console.log(result);
+  asyncText() {
+    console.log(this.selectedRegion);
   }
 
   countryDetailsView(i: any) {
