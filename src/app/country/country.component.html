@@ -8,6 +8,7 @@
     />
 
     <h2>{{ searchBar }}</h2>
+    <button (click)="this.test()">testSearchEngine</button>
     <mat-form-field appearance="fill">
       <mat-label>Select an option</mat-label>
       <mat-select [(value)]="selected">
@@ -37,6 +38,7 @@
   <mat-card
     (click)="countryDetailsView(i)"
     *ngFor="let item of selectedRegion; index as i"
+    class="country-card"
   >
     <div>
       <img src="{{ selectedRegion[i].flags.svg }}" alt="" />

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TestBed } from '@angular/core/testing';
 import { Router } from '@angular/router';
 import { CountryServiceService } from '../country-service.service';
 import { PostService } from '../services/post.service';
@@ -16,6 +17,7 @@ export class CountryComponent implements OnInit {
   result: string = '';
   selectedRegion: any;
   searchBar: string = '';
+  searchResults: any = [];
   constructor(
     private service: PostService,
     private router: Router,
@@ -53,8 +55,20 @@ export class CountryComponent implements OnInit {
     for (let i = 0; i < this.selectedRegion.length; i++) {
       const country = this.selectedRegion[i];
       if (country.name.toLowerCase().includes(this.searchBar.toLowerCase())) {
-        console.log(country.name);
+        let indx = this.searchResults.indexOf(country);
+        if (indx > -1) {
+          console.log('already in');
+        } else {
+          this.searchResults.push(country);
+        }
       }
     }
+    console.log('searchResults', this.searchResults);
+  }
+
+  test() {
+    this.selectedRegion = this.searchResults;
+
+    console.log('testFunction:', this.selectedRegion);
   }
 }
