@@ -1,7 +1,7 @@
 <div class="card-container">
   <div class="frist-row">
-    <input type="text" name="" id="" />
-
+    <input id="searchBar" [(ngModel)]="searchBar" type="text" />
+    <h2>{{ searchBar }}</h2>
     <mat-form-field appearance="fill">
       <mat-label>Select an option</mat-label>
       <mat-select [(value)]="selected">

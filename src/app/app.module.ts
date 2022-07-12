@@ -10,6 +10,7 @@ import { MatCardModule } from '@angular/material/card';
 import { CountryComponent } from './country/country.component';
 import { CountryDetailsComponent } from './country-details/country-details.component';
 import { MatSelectModule } from '@angular/material/select';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, CountryComponent, CountryDetailsComponent],
@@ -21,6 +22,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatToolbarModule,
     MatCardModule,
     MatSelectModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

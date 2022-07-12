@@ -10,11 +10,12 @@ import { PostService } from '../services/post.service';
 })
 export class CountryComponent implements OnInit {
   countries: any;
-  countryNumber!: number;
-  message!: number;
+  countryNumber: number = 0;
+  message: number = 0;
   selected = 'Europe';
-  result!: string;
+  result: string = '';
   selectedRegion: any;
+  searchBar: string = '';
   constructor(
     private service: PostService,
     private router: Router,
@@ -24,6 +25,8 @@ export class CountryComponent implements OnInit {
   ngOnInit() {
     this.selectRegion();
   }
+
+  SeachCounrties() {}
 
   selectRegion() {
     this.service.getCountries().subscribe((response: any) => {
@@ -45,4 +48,6 @@ export class CountryComponent implements OnInit {
     console.log(this.countryNumber);
     this.currentCountry.changeMessage(this.countryNumber);
   }
+
+  seachEngine() {}
 }
