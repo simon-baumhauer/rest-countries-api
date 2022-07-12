@@ -49,5 +49,12 @@ export class CountryComponent implements OnInit {
     this.currentCountry.changeMessage(this.countryNumber);
   }
 
-  seachEngine() {}
+  searchEngine() {
+    for (let i = 0; i < this.selectedRegion.length; i++) {
+      const country = this.selectedRegion[i];
+      if (country.name.toLowerCase().includes(this.searchBar.toLowerCase())) {
+        console.log(country.name);
+      }
+    }
+  }
 }

@@ -1,6 +1,12 @@
 <div class="card-container">
   <div class="frist-row">
-    <input id="searchBar" [(ngModel)]="searchBar" type="text" />
+    <input
+      id="searchBar"
+      [(ngModel)]="searchBar"
+      type="text"
+      (ngModelChange)="this.searchEngine()"
+    />
+
     <h2>{{ searchBar }}</h2>
     <mat-form-field appearance="fill">
       <mat-label>Select an option</mat-label>
