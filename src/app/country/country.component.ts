@@ -22,6 +22,10 @@ export class CountryComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.selectRegion();
+  }
+
+  selectRegion() {
     this.service.getCountries().subscribe((response: any) => {
       this.countries = response;
       this.result = this.countries.filter(
