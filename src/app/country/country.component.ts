@@ -55,15 +55,8 @@ export class CountryComponent implements OnInit {
     for (let i = 0; i < this.selectedRegion.length; i++) {
       const country = this.selectedRegion[i];
       if (country.name.toLowerCase().includes(this.searchBar.toLowerCase())) {
-        let indx = this.searchResults.indexOf(country);
-        if (indx > -1) {
-          console.log('already in');
-        } else {
-          this.searchResults.push(country);
-        }
       }
     }
-    console.log('searchResults', this.searchResults);
   }
 
   test() {
