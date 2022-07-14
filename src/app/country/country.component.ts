@@ -17,7 +17,8 @@ export class CountryComponent implements OnInit {
   result: string = '';
   selectedRegion: any;
   searchBar: string = '';
-  searchResults: any = [];
+  searchResults: any;
+
   constructor(
     private service: PostService,
     private router: Router,
