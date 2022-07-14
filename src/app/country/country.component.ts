@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { Router } from '@angular/router';
 import { CountryServiceService } from '../country-service.service';
+import { SearchComponent } from '../search/search.component';
 import { PostService } from '../services/post.service';
 
 @Component({
@@ -16,8 +17,7 @@ export class CountryComponent implements OnInit {
   selected = 'Europe';
   result: string = '';
   selectedRegion: any;
-  searchBar: string = '';
-  searchResults: any;
+  searchText: string = '';
 
   constructor(
     private service: PostService,
@@ -41,10 +41,6 @@ export class CountryComponent implements OnInit {
     });
   }
 
-  asyncText() {
-    console.log(this.selectedRegion);
-  }
-
   countryDetailsView(i: any) {
     this.router.navigateByUrl('/country-details');
     this.countryNumber = i;
@@ -52,17 +48,8 @@ export class CountryComponent implements OnInit {
     this.currentCountry.changeMessage(this.countryNumber);
   }
 
-  searchEngine() {
-    for (let i = 0; i < this.selectedRegion.length; i++) {
-      const country = this.selectedRegion[i];
-      if (country.name.toLowerCase().includes(this.searchBar.toLowerCase())) {
-      }
-    }
-  }
-
-  test() {
-    this.selectedRegion = this.searchResults;
-
-    console.log('testFunction:', this.selectedRegion);
+  onSearchTextEntered(searchValue: string) {
+    this.searchText = searchValue;
+    console.log(this.searchText);
   }
 }
