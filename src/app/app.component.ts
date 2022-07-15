@@ -17,7 +17,9 @@ export class AppComponent implements OnInit {
     });
   }
 
-  test() {
-    console.log(this.countries);
+  darkMode() {
+    document.body.classList.add('dark-body');
+    let toolbar = document.getElementById('tool-bar');
+    toolbar?.classList.add('dark-toolbar');
   }
 }
